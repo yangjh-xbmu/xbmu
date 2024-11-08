@@ -13,6 +13,8 @@ init python:
         headers = {
             "Content-Type": "application/json",
             "Authorization": f"Bearer {deepseekkey.key}"
+            # 必须要在script.rpy文件同级目录中创建名为deepseekkey.py的文件
+            # 该文件中必须要有key= 'xxxx'的语句
         }
         data = {
             "model": "deepseek-chat",
