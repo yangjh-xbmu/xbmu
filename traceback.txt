@@ -1,30 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 39, in script
-    python:
-  File "game/script.rpy", line 40, in <module>
-    content = call_deepseek_api()
-  File "game/script.rpy", line 31, in call_deepseek_api
-    return response.choices[0].message.content
-AttributeError: 'Response' object has no attribute 'choices'
+  File "game/script.rpy", line 50, in script
+    $ content = call_deepseek_api(user_input)
+  File "game/script.rpy", line 50, in <module>
+    $ content = call_deepseek_api(user_input)
+  File "game/script.rpy", line 15, in call_deepseek_api
+    "Authorization": f"Bearer {deepseekkey.api}"
+AttributeError: module 'deepseekkey' has no attribute 'api'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 39, in script
-    python:
+  File "game/script.rpy", line 50, in script
+    $ content = call_deepseek_api(user_input)
   File "C:\Users\yangjh\Downloads\renpy-8.3.2-sdk\renpy\ast.py", line 821, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\yangjh\Downloads\renpy-8.3.2-sdk\renpy\python.py", line 1178, in py_exec_bytecode
     exec(bytecode, globals, locals)
-  File "game/script.rpy", line 40, in <module>
-    content = call_deepseek_api()
-  File "game/script.rpy", line 31, in call_deepseek_api
-    return response.choices[0].message.content
-AttributeError: 'Response' object has no attribute 'choices'
+  File "game/script.rpy", line 50, in <module>
+    $ content = call_deepseek_api(user_input)
+  File "game/script.rpy", line 15, in call_deepseek_api
+    "Authorization": f"Bearer {deepseekkey.api}"
+AttributeError: module 'deepseekkey' has no attribute 'api'
 
 Windows-10-10.0.22621 AMD64
 Ren'Py 8.3.2.24090902
 xbmu 1.0
-Fri Nov  8 15:11:48 2024
+Fri Nov  8 16:03:01 2024

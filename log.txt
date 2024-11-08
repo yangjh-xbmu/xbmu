@@ -1,20 +1,20 @@
-2024-11-08 07:21:33 UTC
+2024-11-08 08:03:21 UTC
 Windows-10-10.0.22621
 Ren'Py 8.3.2.24090902
 
 Early init took 0.19s
-Loading error handling took 0.06s
-Loading script took 0.37s
+Loading error handling took 0.07s
+Loading script took 0.38s
 Loading save slot metadata took 0.07s
 Loading persistent took 0.00s
- - Init at game/script.rpy:8 took 0.36033 s.
-Running init code took 0.49s
-Loading analysis data took 0.02s
+ - Init at game/script.rpy:4 took 0.33442 s.
+Running init code took 0.45s
+Loading analysis data took 0.03s
 Analyze and compile ATL took 0.00s
-Reloading save slot metadata took 0.05s
+Reloading save slot metadata took 0.06s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\yangjh\\AppData\\Roaming/RenPy/backups\\xbmu':
-Dump and make backups took 0.13s
+Dump and make backups took 0.12s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc took 0.06s
@@ -24,15 +24,15 @@ nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object took 0.01s
 Cleaning stores took 0.00s
 Init translation took 0.06s
-Build styles took 0.00s
+Build styles took 0.01s
 Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.03s
-Prepare screens took 0.12s
+Analyze screens took 0.02s
+Save screen analysis took 0.04s
+Prepare screens took 0.11s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.04s
+Save bytecode. took 0.05s
 Running _start took 0.00s
-Interface start took 0.66s
+Interface start took 0.70s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 2560, 1600)

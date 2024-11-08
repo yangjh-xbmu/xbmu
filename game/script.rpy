@@ -1,27 +1,24 @@
 ﻿define s = Character('希尔维亚', color="#c8ffc8")
 define m = Character('我', color="#c8c8ff")
 
-# game/deepseek_api.rpy
-
-# script.rpy
-
 init python:
 
     import requests
     import json
+    import deepseekkey
 
 
-    def call_deepseek_api(message):
+    def call_deepseek_api(prompt):
         url = "https://api.deepseek.com/chat/completions"
         headers = {
             "Content-Type": "application/json",
-            "Authorization": f"Bearer "
+            "Authorization": f"Bearer {deepseekkey.key}"
         }
         data = {
             "model": "deepseek-chat",
             "messages": [
                 {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": message}
+                {"role": "user", "content": prompt}
             ],
             "stream": False
         }
@@ -38,15 +35,21 @@ init python:
 
 label start:
 
-    python:
-        content = call_deepseek_api('hi')
+    # python:
+    #     content = call_deepseek_api('hi')
 
     play music "audio/backroad.ogg" 
 
     scene bg classroom
     with fade
 
-    s "嗨！今天的课怎么样？,[content]"
+        # 获取用户输入
+    $ user_input = renpy.input("问点什么吧：")
+
+    # 调用API生成回答
+    $ content = call_deepseek_api(user_input)
+
+    s "hi！[content]"
 
     m "挺好的……"
 
